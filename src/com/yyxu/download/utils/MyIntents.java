@@ -22,5 +22,6 @@ public class MyIntents {
 		public static final int ADD = 6;
 		public static final int STOP = 7; 
 		public static final int ERROR = 9;
+		public static final int PAUSE_ALL = 10;
 	}
 }

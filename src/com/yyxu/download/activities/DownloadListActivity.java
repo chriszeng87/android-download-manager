@@ -92,7 +92,15 @@ public class DownloadListActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-
+              Intent downloadIntent = new
+              Intent("com.yyxu.download.services.IDownloadService");
+              downloadIntent.putExtra(MyIntents.TYPE,
+              MyIntents.Types.PAUSE_ALL);
+              startService(downloadIntent);
+             
+//              Intent trafficIntent = new Intent(DownloadListActivity.this,
+//              TrafficCounterService.class);
+//              stopService(trafficIntent);
             }
         });
 
@@ -101,15 +109,15 @@ public class DownloadListActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                // Intent downloadIntent = new
-                // Intent("com.yyxu.download.services.IDownloadService");
-                // downloadIntent.putExtra(MyIntents.TYPE,
-                // MyIntents.Types.STOP);
-                // startService(downloadIntent);
-                //
-                // Intent trafficIntent = new Intent(DownloadListActivity.this,
-                // TrafficCounterService.class);
-                // stopService(trafficIntent);
+//                 Intent downloadIntent = new
+//                 Intent("com.yyxu.download.services.IDownloadService");
+//                 downloadIntent.putExtra(MyIntents.TYPE,
+//                 MyIntents.Types.STOP);
+//                 startService(downloadIntent);
+//                
+//                 Intent trafficIntent = new Intent(DownloadListActivity.this,
+//                 TrafficCounterService.class);
+//                 stopService(trafficIntent);
             }
         });
 

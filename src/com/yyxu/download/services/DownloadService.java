@@ -71,6 +71,9 @@ public class DownloadService extends Service {
                         mDownloadManager.pauseTask(url);
                     }
                     break;
+                case MyIntents.Types.PAUSE_ALL:
+                	mDownloadManager.pauseAllTask();
+                    break;
                 case MyIntents.Types.STOP:
                     mDownloadManager.close();
                     // mDownloadManager = null;

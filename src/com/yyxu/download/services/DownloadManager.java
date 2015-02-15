@@ -1,21 +1,22 @@
 
 package com.yyxu.download.services;
 
-import com.yyxu.download.utils.ConfigUtils;
-import com.yyxu.download.utils.MyIntents;
-import com.yyxu.download.utils.NetworkUtils;
-import com.yyxu.download.utils.StorageUtils;
-
-import android.content.Context;
-import android.content.Intent;
-import android.widget.Toast;
-
 import java.io.File;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.widget.Toast;
+
+import com.yyxu.download.utils.ConfigUtils;
+import com.yyxu.download.utils.MyIntents;
+import com.yyxu.download.utils.NetworkUtils;
+import com.yyxu.download.utils.StorageUtils;
 
 public class DownloadManager extends Thread {
 
@@ -190,7 +191,6 @@ public class DownloadManager extends Thread {
     }
 
     public synchronized void pauseTask(String url) {
-
         DownloadTask task;
         for (int i = 0; i < mDownloadingTasks.size(); i++) {
             task = mDownloadingTasks.get(i);
